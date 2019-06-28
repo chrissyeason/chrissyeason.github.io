@@ -15,11 +15,20 @@ $('#submit-city').click(function(e){
 
     $.ajax({
         url: `http://dev.virtualearth.net/REST/v1/Locations?countryRegion=US&adminDistrict=${inputArray[1]}&locality=${inputArray[0]}&key=AsNSrJ9nxY0hH82Hft6W7lSFK5zKER34LGJ3hYm70N6buBQXYlVneYV22zyYVLjL`,
-        // url:`https://api.brewerydb.com/v2/&key=68855133f4391d6efa6f4d8fcf1b7674`
-        // ,
     }).then(
         (data) => {
             const searchCoordinates = data.resourceSets[0].resources[0].geocodePoints[0].coordinates;
+            $.ajax({
+                //url: `https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/search/geo/point?lat=30.267589569091797&lng=-97.74298858642578&radius=25&key=68855133f4391d6efa6f4d8fcf1b7674`,
+                url: 'https://cors-anywhere.herokuapp.com/https://www.brewerydb.com/browse/map/get-breweries?lat=30.267153&lng=-97.74306079999997&radius=25&search=austin%2C+tx'
+            }).then(
+                (data) => {
+                    console.log(data);
+                },
+                () => {
+                    console.log('bad request');
+                }
+            )
         },
         () => {
             console.log("bad request");
