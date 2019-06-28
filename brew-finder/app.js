@@ -14,7 +14,7 @@ $('#submit-city').click(function(e){
     
 
     $.ajax({
-        url: `http://dev.virtualearth.net/REST/v1/Locations?countryRegion=US&adminDistrict=${inputArray[1]}&locality=${inputArray[0]}&key=AsNSrJ9nxY0hH82Hft6W7lSFK5zKER34LGJ3hYm70N6buBQXYlVneYV22zyYVLjL`,
+        url: `https://dev.virtualearth.net/REST/v1/Locations?countryRegion=US&adminDistrict=${inputArray[1]}&locality=${inputArray[0]}&key=AsNSrJ9nxY0hH82Hft6W7lSFK5zKER34LGJ3hYm70N6buBQXYlVneYV22zyYVLjL`,
     }).then(
         (data) => {
             const searchCoordinates = data.resourceSets[0].resources[0].geocodePoints[0].coordinates;
