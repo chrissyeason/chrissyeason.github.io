@@ -1,5 +1,7 @@
 // $('body').append('im working');
-$('.carouselSlides').carousel();
+$('.carouselSlides').carousel({
+    interval: 2000
+});
 $('#submit-city').click(function(e){
     e.preventDefault();
     const userInput = $('#city-input').val();
@@ -26,18 +28,16 @@ $('#submit-city').click(function(e){
             }).then(
                 (data) => {
                     let dataInfo = JSON.parse(data);
-                    const mainName = dataInfo.data[0].brewery.name;
-                    const mainPhoto = dataInfo.data[0].brewery.images.squareMedium;
-                    console.log(mainPhoto);
-                    
+            
                     // CAROUSEL INFO AND PHOTOS
-                    $('body').append(mainName);
-                    $('#main-brewery-photo').append(`<img src="https://brewerydb-images.s3.amazonaws.com/brewery/JxLZ8H/upload_DmVKPl-squareMedium.png">`)
-                    
-
+                    // $('body').append(mainName);
+                
                     for(let i = 0; i < dataInfo.data.length; i++){
-                        // console.log(dataInfo.data[i]);
-                        // save info for dataInfo.data[0] in a variable
+                        // save info for dataInfo.data[i] in a variable
+                        const mainName = dataInfo.data[i].brewery.name;
+                        // const mainPhoto = dataInfo.data[0].brewery.images.squareMedium;
+                        console.log(dataInfo.data[i]);
+                        
                         // console.log(dataInfo.data[i].brewery.name);
                         // brewery.images.squareMedium is brewery's logo good large logo
                     }
