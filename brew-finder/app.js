@@ -31,7 +31,7 @@ $('#submit-city').click(function(e){
                     let dataInfo = JSON.parse(data);
             
                     for(let i = 0; i < dataInfo.data.length; i++){
-                        
+                        console.log(dataInfo.data[i]);
                         // save info for dataInfo.data[i] in a variable
                         const breweryName = dataInfo.data[i].brewery.name;
                         // set breweryImage to null and only set to image if image exists
@@ -43,19 +43,24 @@ $('#submit-city').click(function(e){
                         if(dataInfo.data[i].brewery.hasOwnProperty('website')){
                             breweryWebsite = dataInfo.data[i].brewery.website;
                         }
+                        
+                        let breweryAddress = null;
+                        if(dataInfo.data[i].hasOwnProperty('streetAddress')){
+                            breweryAddress = dataInfo.data[i].streetAddress;
+                        }
                         // create var link that is href
                         const link = $(`<a href="#">${breweryName}</a>`);
                         // save variables to link
                         link.data({"breweryWebsite": breweryWebsite, 
                                     "breweryName": breweryName,
-                                    "breweryImage": breweryImage});
+                                    "breweryImage": breweryImage,
+                                    "breweryAddress": breweryAddress});
 
                         const li = $(`<li>`);
                         li.append(link);
                         
                         // append breweryName to ul of column1-names-list
                         $('#column1-names-list ul').append(li);
-                        // get brewery website
                         
                         
                         link.click(function(e) {
@@ -71,21 +76,13 @@ $('#submit-city').click(function(e){
                             if(storage.breweryWebsite !== null){
                                 brewInfo.append(`<a href="#">${storage.breweryWebsite}</a>`);
                             }
-                            // hover over and heart appears
+                            if(storage.breweryAddress !== null){
+                                brewInfo.append(`<p>${storage.breweryAddress}<p>`);
+                            }
                             
                             // click heart and append breweryName to favorite list
                         });
 
-                        
-                        $(link).hover(
-                            function(){
-                                let heartIcon = $(`<a href="#" class="inline"><i class="fab fa-gratipay"></i></a>`)
-                                $(this).insert(heartIcon);
-                            }, function(){
-                                $(this).find(heartIcon).remove();
-                            }
-                        )
-                        
                         // click on li and replace carousel with li info
                         // console.log(dataInfo.data[i]);
                         
