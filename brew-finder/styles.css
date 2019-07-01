@@ -78,7 +78,30 @@ h5 {
     text-shadow: 2px 2px #272626;
 }
 
-/* #hearts-col {
-    position: absolute;
-    left: 180px;
-} */
+.btn {
+    background-color: #99cf57; /* Blue background */
+    border: solid gray 2px; /* Remove borders */
+    color: white; /* White text */
+    padding: 2px 6px; /* Some padding */
+    font-size: 26px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    display: block;
+    margin: 15px;
+  }
+
+  .btn:hover {
+    background-color: #416811;
+  }
+
+  .breweryDescriptions {
+    text-align: center;
+    border-right: dashed lightgray 1px;
+    border-left: dashed lightgray 1px;
+  }
+
+  .breweryDescriptions img {
+      max-width: 75%;
+      padding: auto 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }

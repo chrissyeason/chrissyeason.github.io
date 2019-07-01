@@ -43,7 +43,6 @@ $('#submit-city').click(function(e){
                         if(dataInfo.data[i].brewery.hasOwnProperty('website')){
                             breweryWebsite = dataInfo.data[i].brewery.website;
                         }
-                        
                         let breweryAddress = null;
                         if(dataInfo.data[i].hasOwnProperty('streetAddress')){
                             breweryAddress = dataInfo.data[i].streetAddress;
@@ -67,6 +66,7 @@ $('#submit-city').click(function(e){
                             let storage = $(this).data();
                             let brewInfo = $('#brewery-info-large');
                             brewInfo.empty();
+                            brewInfo.addClass('breweryDescriptions');
                             // if statement says if images property is present append img
                             if(storage.breweryImage !== null){
                                 brewInfo.append(`<img src="${storage.breweryImage}">`);
@@ -74,12 +74,13 @@ $('#submit-city').click(function(e){
                             brewInfo.append(`<h2>${storage.breweryName}</h2>`);
 
                             if(storage.breweryWebsite !== null){
-                                brewInfo.append(`<a href="#">${storage.breweryWebsite}</a>`);
+                                brewInfo.append(`<a href="${storage.breweryWebsite}">${storage.breweryWebsite}</a>`);
                             }
                             if(storage.breweryAddress !== null){
                                 brewInfo.append(`<p>${storage.breweryAddress}<p>`);
                             }
-                            
+                            let favoriteButton = $('<button class="btn"><i class="fas fa-heart"></i></button>');
+                            brewInfo.append(favoriteButton);
                             // click heart and append breweryName to favorite list
                         });
 
