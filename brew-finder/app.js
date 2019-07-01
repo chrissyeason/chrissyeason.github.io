@@ -71,10 +71,20 @@ $('#submit-city').click(function(e){
                             if(storage.breweryWebsite !== null){
                                 brewInfo.append(`<a href="#">${storage.breweryWebsite}</a>`);
                             }
+                            // hover over and heart appears
                             
-                          });
+                            // click heart and append breweryName to favorite list
+                        });
 
                         
+                        $(link).hover(
+                            function(){
+                                let heartIcon = $(`<a href="#" class="inline"><i class="fab fa-gratipay"></i></a>`)
+                                $(this).insert(heartIcon);
+                            }, function(){
+                                $(this).find(heartIcon).remove();
+                            }
+                        )
                         
                         // click on li and replace carousel with li info
                         // console.log(dataInfo.data[i]);

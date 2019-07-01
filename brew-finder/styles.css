@@ -24,9 +24,10 @@
 }
 
 #city-input {
-    margin: 4px;
+    margin-right: 10px;
     border-radius: 5px;
     padding: 5px;
+    padding-left: 12px;
 }
 
 #submit-city {
@@ -40,6 +41,7 @@ ul {
     padding-top: 20px;
     margin-top: 20px;
     list-style: none;
+    padding-left: 10px;
 }
 
 h3 {
@@ -68,4 +70,11 @@ h5 {
     padding: 0 auto;
     font-size: 4vw;
     font-family: 'Permanent Marker', cursive;
+    margin-bottom: 20rem;
+    text-shadow: 2px 2px #272626;
 }
+
+/* #hearts-col {
+    position: absolute;
+    left: 180px;
+} */
