@@ -1,14 +1,6 @@
-/* #carouselSlides {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 50px;
-    padding-left: 50px;
-    width: 100%;
+/* body {
+    background-image: url ('https://images.unsplash.com/photo-1507310951869-fe0941df4dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
 } */
-
-.col {
-    border: solid gray 1px;
-}
 
 .container {
     margin-top: 15px;
@@ -47,6 +39,7 @@
 ul {
     padding-top: 20px;
     margin-top: 20px;
+    list-style: none;
 }
 
 h3 {
@@ -65,4 +58,14 @@ h3 {
       padding-right: 0;
       padding-left: 0;
     }
+}
+
+a {
+    color: gray;
+}
+
+h5 {
+    padding: 0 auto;
+    font-size: 4vw;
+    font-family: 'Permanent Marker', cursive;
 }
