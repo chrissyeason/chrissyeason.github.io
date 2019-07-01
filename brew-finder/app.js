@@ -27,16 +27,57 @@ $('#submit-city').click(function(e){
                 url: `https://cors-anywhere.herokuapp.com/https://www.brewerydb.com/browse/map/get-breweries?lat=${searchCoordinates[0]}&lng=${searchCoordinates[1]}&radius=15`
             }).then(
                 (data) => {
+                    // parse string into object
                     let dataInfo = JSON.parse(data);
             
-                    // CAROUSEL INFO AND PHOTOS
-                    // $('body').append(mainName);
-                
                     for(let i = 0; i < dataInfo.data.length; i++){
+                        
                         // save info for dataInfo.data[i] in a variable
-                        const mainName = dataInfo.data[i].brewery.name;
-                        // const mainPhoto = dataInfo.data[0].brewery.images.squareMedium;
-                        console.log(dataInfo.data[i]);
+                        const breweryName = dataInfo.data[i].brewery.name;
+                        // set breweryImage to null and only set to image if image exists
+                        let breweryImage = null;
+                        if(dataInfo.data[i].brewery.hasOwnProperty('images')){
+                            breweryImage = dataInfo.data[i].brewery.images.squareLarge;
+                        }
+                        let breweryWebsite = null;
+                        if(dataInfo.data[i].brewery.hasOwnProperty('website')){
+                            breweryWebsite = dataInfo.data[i].brewery.website;
+                        }
+                        // create var link that is href
+                        const link = $(`<a href="#">${breweryName}</a>`);
+                        // save variables to link
+                        link.data({"breweryWebsite": breweryWebsite, 
+                                    "breweryName": breweryName,
+                                    "breweryImage": breweryImage});
+
+                        const li = $(`<li>`);
+                        li.append(link);
+                        
+                        // append breweryName to ul of column1-names-list
+                        $('#column1-names-list ul').append(li);
+                        // get brewery website
+                        
+                        
+                        link.click(function(e) {
+                            let storage = $(this).data();
+                            let brewInfo = $('#brewery-info-large');
+                            brewInfo.empty();
+                            // if statement says if images property is present append img
+                            if(storage.breweryImage !== null){
+                                brewInfo.append(`<img src="${storage.breweryImage}">`);
+                            }
+                            brewInfo.append(`<h2>${storage.breweryName}</h2>`);
+
+                            if(storage.breweryWebsite !== null){
+                                brewInfo.append(`<a href="#">${storage.breweryWebsite}</a>`);
+                            }
+                            
+                          });
+
+                        
+                        
+                        // click on li and replace carousel with li info
+                        // console.log(dataInfo.data[i]);
                         
                         // console.log(dataInfo.data[i].brewery.name);
                         // brewery.images.squareMedium is brewery's logo good large logo

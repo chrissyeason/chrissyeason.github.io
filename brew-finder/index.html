@@ -10,29 +10,63 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Brew Love</h1>
+    <div class="container-fluid">
+        <nav class="navbar sticky-top bg-dark">
+            <h1>Brew L<span style="color: #99cf57">o</span>ve</h1>
+            <div id="search-box-area">
+                <input  id="city-input" type="text" placeholder="city, state">
+                <input type="submit" id="submit-city">   
+            </div> 
+        </nav>
 
-        <input type="text" placeholder="city, state, zipcode" id="city-input">
-        <input type="submit" id="submit-city">    
-    
-        <div id="carouselSlides" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="little-city-brewing-co" class="d-block w-100" src="https://brewerydb-images.s3.amazonaws.com/brewery/JxLZ8H/upload_DmVKPl-squareLarge.png" alt="First slide">
-                <h2>Little City Brewing Company, Raleigh, NC</h2>
+        <div class="container">
+            <div class="row no-gutters">
+              <div id="column1-names-list" class="col">
+                <h3>List of Breweries</h3>
               </div>
-              <div class="carousel-item">
-                <img id="stats-brewpup" class="d-block w-100" src="https://brewerydb-images.s3.amazonaws.com/brewery/WD7vmq/upload_GluzH3-squareLarge.png" alt="Second slide">
-                <h2>STATS Brewpub, Atlanta, GA</h2>
-              </div>
-              <div class="carousel-item">
-                <img id="orf-brewing" class="d-block w-100" src="https://brewerydb-images.s3.amazonaws.com/brewery/8xokAA/upload_fvuYrM-squareLarge.png" alt="Third slide">
-                <h2>Orf Brewing, Austin, TX</h2>
+                
+                    <div id="carouselSlides" class="carousel slide col" data-ride="carousel">
+                            <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
+                                <!-- <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                </ol> -->
+                            </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block" src="https://images.unsplash.com/photo-1471421298428-1513ab720a8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Find your favorite local breweries</h5>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block" src="https://images.unsplash.com/photo-1533242553289-5ed0b2bc5a74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>in your favorite cities</h5>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block" src="https://images.unsplash.com/photo-1532635248-cdd3d399f56c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>save them for future happy days</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+              <div class="col">
+                <h3>Favorites</h3>
               </div>
             </div>
-          </div>
+        
+        </div>  
+    </div>    
 
-          <div id="main-brewery-photo"></div>
+
         <!-- jquery, popper, bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
