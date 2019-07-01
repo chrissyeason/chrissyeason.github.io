@@ -81,9 +81,13 @@ $('#submit-city').click(function(e){
                             }
                             let favoriteButton = $('<button class="btn"><i class="fas fa-heart"></i></button>');
                             brewInfo.append(favoriteButton);
-                            // click heart and append breweryName to favorite list
+                            favoriteButton.click(function(e){
+                                // append link to favorite column
+                                $(`#favorites ul`).append(`<li><a href="${storage.breweryWebsite}">${storage.breweryWebsite}</a></li>`);
+                            });
                         });
 
+                        
                         // click on li and replace carousel with li info
                         // console.log(dataInfo.data[i]);
                         
