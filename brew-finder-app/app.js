@@ -90,7 +90,7 @@ $('#submit-city').click(function(e){
                                 // append link to favorite column
                                 let favoritesList = $(`#favorites ul`);
                                 
-                                    favoritesList.append(`<li><a href="${storage.breweryWebsite}">${storage.breweryName}</a></li>`);
+                                    favoritesList.append(`<li><a href="${storage.breweryWebsite}" target="_blank">${storage.breweryName}</a></li>`);
                                 
                                 
                                 // open new window when clicked 

@@ -15,27 +15,32 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #095c61, #45d6d3);
+    background-image: linear-gradient(to right, #468b8f, #cef2ec);
 }
 
-#favorites-page-button {
-    font-size: 23px;
-}
-#favorites-page-button:hover {
-    color: orangered;
-}
 .container {
-    box-shadow: 5px 5px 5px #095c61;
+    box-shadow: 5px 5px 5px #468b8f;
     margin-top: 20px;
     border: solid gray 1px;
     padding-left: 0px;
     padding-right: 0px;
 }
 
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+}
+
 .navbar {
     height: 130px;
     /* padding-left: 50px; */
     padding: 15px 0 20px 50px;
+    border-bottom: white solid 6px;
 }
 
 .navbar h1 {
@@ -54,55 +59,36 @@ body {
     padding-left: 12px;
 }
 
-#submit-city {
-    border-radius: 15px;
+/* #submit-city {
+    
     background-color: #70a859;
     padding-left: 12px;
     padding-right: 12px;
     border: #70a859 solid 1px;
-}
+} */
+
 #submit-city:hover {
-    background-color: orangered;
-    border: orangered solid 1px;
+    background-color: #f57542;
+    border: #f57542 solid 1px;
 }
 
-ul {
-    padding-top: 20px;
-    margin-top: 20px;
-    list-style: none;
-    padding-left: 10px;
-    overflow: scroll;
+#submit-city {
+    background-color: #99cf57; 
+    border: #99cf57 solid 1px; 
+    border-radius: 8px;
+    color: white; 
+    padding: 3px 12px;
+    font-size: 20px; 
+    cursor: pointer;
+    /* display: block;
+    position: absolute; */
+    right: 15px;
+    top: 2px;
+    margin-right: 8px;
+    margin-left: -5px;
 }
 
-h3 {
-    padding-top: 25px;
-    text-align: center;
-    font-size: 2rem;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
-
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  
-    [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-}
-
-a {
-    color: gray;
-}
-
-h5 {
-    padding: 0 auto;
-    font-size: 4vw;
-    font-family: 'Permanent Marker', cursive;
-    margin-bottom: 20rem;
-    text-shadow: 2px 2px #272626;
-}
-
+/* FAVORITE HEART BUTTON FOR EACH DESCRIPTION */
 .btn {
     background-color: #99cf57; 
     border: solid gray 2px; 
@@ -118,8 +104,44 @@ h5 {
   }
 
 .btn:hover {
-    background-color: #416811;
+    background-color: #f57542;
 }
+
+#favorites-page-button {
+    font-size: 23px;
+}
+
+#favorites-page-button:hover {
+    color: orangered;
+}
+
+ul {
+    padding-top: 20px;
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 10px;
+    overflow: scroll;
+}
+
+h3 {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+h5 {
+    padding: 0 auto;
+    font-size: 4vw;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 20rem;
+    text-shadow: 2px 2px #272626;
+}
+
+a {
+    color: #343a40;
+}
+
 
 .breweryDescriptions {
     padding-top: 20px;
