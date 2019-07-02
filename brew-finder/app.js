@@ -4,6 +4,8 @@ $('.carouselSlides').carousel({
 });
 $('#submit-city').click(function(e){
     e.preventDefault();
+    let breweryList = $(`#breweryList`);
+    breweryList.empty();
     const userInput = $('#city-input').val();
     // split string into state and city
     // userinput = 'austin, tx'
@@ -83,17 +85,16 @@ $('#submit-city').click(function(e){
                             let favoriteButton = $('<button class="btn"><i class="fas fa-heart"></i></button>');
                             brewInfo.append(favoriteButton);
                             favoriteButton.click(function(e){
+                                // check favorite list and see if breweryWebsite already exhists
                                 // append link to favorite column
-                                $(`#favorites ul`).append(`<li><a href="${storage.breweryWebsite}">${storage.breweryWebsite}</a></li>`);
+                                let favoritesList = $(`#favorites ul`);
+                                favoritesList.append(`<li><a href="${storage.breweryWebsite}">${storage.breweryName}</a></li>`);
+                                // store list locally on browser
+                                localStorage.favoritesList = 'favoritesList';
+                                // open new window when clicked 
                             });
                         });
 
-                        
-                        // click on li and replace carousel with li info
-                        // console.log(dataInfo.data[i]);
-                        
-                        // console.log(dataInfo.data[i].brewery.name);
-                        // brewery.images.squareMedium is brewery's logo good large logo
                     }
                     
                 },

@@ -1,3 +1,10 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+}
+
 body {
     background-image: linear-gradient(to right, #095c61, #45d6d3);
 }
@@ -8,9 +15,6 @@ body {
     border: solid gray 1px;
     padding-left: 0px;
     padding-right: 0px;
-}
-@media (min-width: 576px) {
-
 }
 
 .navbar {
@@ -49,10 +53,6 @@ ul {
     padding-left: 10px;
     overflow: scroll;
 }
-
-/* li {
-    line-height: 3em;
-} */
 
 h1 {
     font-size: 4vw;
@@ -121,8 +121,12 @@ h5 {
 
   #favorites {
       padding-left: 15px;
-      overflow: scroll;
       background-color: #d3d7db;
+  }
+
+  #favorites ul {
+    overflow: scroll;
+    max-height: 645px;
   }
 
   #favorites h3 {
@@ -146,3 +150,4 @@ h5 {
   /* look at overflow */
   /* justified content, space between */
 /* add ul hover class to change link color */
+
