@@ -60,6 +60,7 @@ $('#submit-city').click(function(e){
                         
                         // append breweryName to ul of column1-names-list
                         $('#column1-names-list ul').append(li);
+                        $(li).addClass('list-group-item');
                         
                         
                         link.click(function(e) {
