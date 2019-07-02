@@ -5,16 +5,20 @@
     }
     .breweryDescriptions {
         max-width: 100%;
+        flex: auto;
+        padding-bottom: 30px;
     }
+    .carousel-inner {
+        overflow: visible;
+    }
+    
 }
 
 body {
     background-image: linear-gradient(to right, #095c61, #45d6d3);
 }
 
-.carousel-inner {
-    overflow: visible;
-}
+
 .container {
     box-shadow: 5px 5px 5px #095c61;
     margin-top: 20px;
@@ -71,8 +75,7 @@ h3 {
     margin-right: 0;
     margin-left: 0;
   
-    > .col,
-    > [class*="col-"] {
+    [class*="col-"] {
       padding-right: 0;
       padding-left: 0;
     }
@@ -113,6 +116,7 @@ h5 {
     text-align: center;
     border-right: dashed lightgray 1px;
     background-color: white;
+
   }
 
   .breweryDescriptions img {
