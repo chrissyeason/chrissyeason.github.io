@@ -1,13 +1,13 @@
-/* body {
-    background-image: url ('https://images.unsplash.com/photo-1507310951869-fe0941df4dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-} */
+body {
+    background-image: linear-gradient(to right, #3c9990, #45d6d3);
+}
 
 @media (min-width: 576px) {
 
 }
 
 .navbar {
-    height: 100px;
+    height: 120px;
     padding-left: 50px;
 }
 
@@ -109,8 +109,13 @@ h5 {
 
   #favorites {
       padding-left: 15px;
-      background-color: #07585c;
       overflow: scroll;
+      background-color: #912609;
+  }
+
+  #favorites h3 {
+    color: white;
+    text-align: center;
   }
 
   #favorites li {
