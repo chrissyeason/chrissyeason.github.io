@@ -33,7 +33,7 @@ $('#submit-city').click(function(e){
                     let dataInfo = JSON.parse(data);
             
                     for(let i = 0; i < dataInfo.data.length; i++){
-                        console.log(dataInfo.data[i]);
+                        // console.log(dataInfo.data[i]);
                         // save info for dataInfo.data[i] in a variable
                         const breweryName = dataInfo.data[i].brewery.name;
                         // set breweryImage to null and only set to image if image exists
@@ -82,19 +82,21 @@ $('#submit-city').click(function(e){
                             if(storage.breweryAddress !== null){
                                 brewInfo.append(`<p>${storage.breweryAddress}<p>`);
                             }
+                            // append favorite brewery to favorites list
                             let favoriteButton = $('<button class="btn"><i class="fas fa-heart"></i></button>');
                             brewInfo.append(favoriteButton);
                             favoriteButton.click(function(e){
                                 // check favorite list and see if breweryWebsite already exhists
                                 // append link to favorite column
                                 let favoritesList = $(`#favorites ul`);
-                                favoritesList.append(`<li><a href="${storage.breweryWebsite}">${storage.breweryName}</a></li>`);
-                                // store list locally on browser
-                                localStorage.favoritesList = 'favoritesList';
+                                
+                                    favoritesList.append(`<li><a href="${storage.breweryWebsite}">${storage.breweryName}</a></li>`);
+                                
+                                
                                 // open new window when clicked 
                             });
                         });
-
+                    
                     }
                     
                 },
@@ -110,8 +112,64 @@ $('#submit-city').click(function(e){
 })
 
 
+// function storageAvailable(type) {
+//     let storage;
+//     try {
+//         storage = window[type];
+//         var x = '__storage_test__';
+//         storage.setItem(x, x);
+//         storage.removeItem(x);
+//         return true;
+//     }
+//     catch(e) {
+//         return e instanceof DOMException && (
+//             // everything except Firefox
+//             e.code === 22 ||
+//             // Firefox
+//             e.code === 1014 ||
+//             // test name field too, because code might not be present
+//             // everything except Firefox
+//             e.name === 'QuotaExceededError' ||
+//             // Firefox
+//             e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+//             // acknowledge QuotaExceededError only if there's something already stored
+//             (storage && storage.length !== 0);
+//     }
+// }
+// if (storageAvailable('localStorage')) {
+//     console.log("Yippee! We can use localStorage awesomeness");
+//   }
+//   else {
+//     console.log("Too bad, no localStorage for us");
+//   }
+
+// // The Storage.getItem() method is used to get a data item from storage; 
+// // in this case, we are testing to see whether the key item exists; 
+// // if not, we run populateStorage() to add the existing customization values 
+// // to the storage. If there are already values there, we run a function() 
+// // to update the page styling with the stored values.
+  
+//   if(!localStorage.getItem('favoritesList')) {
+//     populateStorage();
+//   } else {
+//     addFavorites();
+//   }
+  
+// function populateStorage(){
+//     let favoriteItem = $('#favorites li')
+//     // key is variable, value is 
+//     localStorage.setItem()
+// }
+// function addFavorites(){
+//     // update the page styling with the stored values
+//     let favoritesList = $(`#favorites ul`);
+//     console.log(favoritesList);
+//     // let currentFavorite = localStorage.getItem(favoriteList);
+// }
 
 
+// // store list locally on browser
+// localStorage.favoritesList = 'favoritesList';
 
 
     

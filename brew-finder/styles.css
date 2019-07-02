@@ -21,6 +21,9 @@ body {
 #favorites-page-button {
     font-size: 23px;
 }
+#favorites-page-button:hover {
+    color: orangered;
+}
 .container {
     box-shadow: 5px 5px 5px #095c61;
     margin-top: 20px;
@@ -114,43 +117,43 @@ h5 {
     margin: 15px;
   }
 
-  .btn:hover {
+.btn:hover {
     background-color: #416811;
-  }
+}
 
-  .breweryDescriptions {
+.breweryDescriptions {
     padding-top: 20px;
     text-align: center;
     border-right: dashed lightgray 1px;
     background-color: white;
 
-  }
+}
 
-  .breweryDescriptions img {
+.breweryDescriptions img {
       max-width: 75%;
       padding: auto 0;
       margin-top: 15px;
       margin-bottom: 15px;
-  }
+}
 
-  #favorites {
+#favorites {
       padding-left: 15px;
       background-color: #d3d7db;
-  }
+}
 
-  #favorites ul {
+#favorites ul {
     overflow: scroll;
     max-height: 645px;
-  }
+}
 
-  #favorites h3 {
+#favorites h3 {
     color: #343a40;
     text-align: center;
-  }
+}
 
-  #favorites li {
+#favorites li {
       color: white;
-  }
+}
 
 .list-group-item :hover {
     color: #07585c;
@@ -164,4 +167,6 @@ h5 {
   /* look at overflow */
   /* justified content, space between */
 /* add ul hover class to change link color */
-
+.card {
+    border-radius: 0px;
+}
