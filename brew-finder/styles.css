@@ -18,7 +18,9 @@ body {
     background-image: linear-gradient(to right, #095c61, #45d6d3);
 }
 
-
+#favorites-page-button {
+    font-size: 23px;
+}
 .container {
     box-shadow: 5px 5px 5px #095c61;
     margin-top: 20px;
@@ -28,8 +30,9 @@ body {
 }
 
 .navbar {
-    height: 120px;
-    padding-left: 50px;
+    height: 130px;
+    /* padding-left: 50px; */
+    padding: 15px 0 20px 50px;
 }
 
 .navbar h1 {
@@ -54,6 +57,10 @@ body {
     padding-left: 12px;
     padding-right: 12px;
     border: #70a859 solid 1px;
+}
+#submit-city:hover {
+    background-color: orangered;
+    border: orangered solid 1px;
 }
 
 ul {
@@ -94,10 +101,10 @@ h5 {
 }
 
 .btn {
-    background-color: #99cf57; /* Blue background */
-    border: solid gray 2px; /* Remove borders */
-    color: white; /* White text */
-    padding: 2px 6px; /* Some padding */
+    background-color: #99cf57; 
+    border: solid gray 2px; 
+    color: white; 
+    padding: 2px 6px; 
     font-size: 26px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
     display: block;
