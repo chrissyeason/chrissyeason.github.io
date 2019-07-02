@@ -3,12 +3,18 @@
     [class*="col-"] {
       width: 100%;
     }
+    .breweryDescriptions {
+        max-width: 100%;
+    }
 }
 
 body {
     background-image: linear-gradient(to right, #095c61, #45d6d3);
 }
 
+.carousel-inner {
+    overflow: visible;
+}
 .container {
     box-shadow: 5px 5px 5px #095c61;
     margin-top: 20px;
@@ -54,13 +60,10 @@ ul {
     overflow: scroll;
 }
 
-h1 {
-    font-size: 4vw;
-}
 h3 {
     padding-top: 25px;
     text-align: center;
-    font-size: 1.75vw;
+    font-size: 2rem;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
