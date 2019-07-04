@@ -108,8 +108,10 @@ body {
     background-color: #f57542;
 }
 
-#favorites-page-button {
+#favorites-page-button a {
     font-size: 23px;
+    color: #99cf57;
+
 }
 
 #favorites-page-button:hover {
