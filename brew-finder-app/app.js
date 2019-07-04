@@ -4,8 +4,12 @@ $('.carouselSlides').carousel({
 });
 $('#submit-city').click(function(e){
     e.preventDefault();
+    // after user clicks submit button the list of breweries is emptied
     let breweryList = $(`#breweryList`);
     breweryList.empty();
+    // let brewerInfoContainer = $(`#brewery-info-large`);
+    // brewerInfoContainer.empty().addClass(`landing-after-submit`).append(`<h5>Get<br>ya<br>drink<br>on!</h5>`);
+
     const userInput = $('#city-input').val();
     // split string into state and city
     // userinput = 'austin, tx'
