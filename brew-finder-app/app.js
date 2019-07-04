@@ -35,7 +35,7 @@ $('#submit-city').click(function(e){
                 (data) => {
                     // parse string into object
                     let dataInfo = JSON.parse(data);
-            
+                    
                     for(let i = 0; i < dataInfo.data.length; i++){
                         // console.log(dataInfo.data[i]);
                         // save info for dataInfo.data[i] in a variable
@@ -93,16 +93,14 @@ $('#submit-city').click(function(e){
                                 // check favorite list and see if breweryWebsite already exhists
                                 // append link to favorite column
                                 let favoritesList = $(`#favorites ul`);
-                                
-                                    favoritesList.append(`<li><a href="${storage.breweryWebsite}" target="_blank">${storage.breweryName}</a></li>`);
-                                
-                                
-                                // open new window when clicked 
+                                let favoriteLi = $(`##favorites li`);
+                                    if(favoriteLi.contains(storage.breweryName)){
+                                        favoritesList.append(`<li><a href="${storage.breweryWebsite}" target="_blank">${storage.breweryName}</a></li>`);
+                                    }
+                            
                             });
                         });
-                    
                     }
-                    
                 },
                 () => {
                     console.log('bad request');
