@@ -89,18 +89,25 @@ footer p {
 }
 @media only screen and (max-width: 768px) {
     #logo {
-        margin: 31% 0 0% 10%;
+        margin: 25% 0 0% 10%;
         width: 60vw;
+    }
+    #background-image-container {
+        width: 50vw;
+        height: 75vh;
+        overflow: hidden;
     }
     #background {
         box-shadow: 2vw 2vw 2vw lightgrey;
-        width: 445vw;
-        height: 86vh;
-        top: -17%;
-        left: -244%;
+        width: 543vw;
+        height: 118vh;
+        top: -15%;
+        left: -300%;
+        position: fixed;
     }
     .header-title {
         margin-left: 0;
+        margin-top: -69vh;
     }
     h1 {
         margin-top: 4%;
