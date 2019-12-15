@@ -105,6 +105,7 @@ footer p {
     h1 {
         margin-top: 4%;
         margin-left: 10%;
+        font-family: 'San Francisco', sans-serif;
         font-size: 7.7vw;
         text-align: left;
         padding-right: 4%;
@@ -115,6 +116,7 @@ footer p {
         margin-top: -2%;
         font-size: 3.5vw;
         text-align: left;
+        font-family: 'San Francisco', sans-serif;
         color: white;
         text-shadow: 0.25vw 0 5.5vw #565757;
         margin-left: 10%;
