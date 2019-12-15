@@ -90,13 +90,13 @@ footer p {
 @media only screen and (max-width: 768px) {
     #logo {
         margin: 31% 0 0% 10%;
-    width: 60vw;
+        width: 60vw;
     }
     #background {
         box-shadow: 2vw 2vw 2vw lightgrey;
         width: 445vw;
         height: 86vh;
-        top: -12%;
+        top: -17%;
         left: -244%;
     }
     .header-title {
