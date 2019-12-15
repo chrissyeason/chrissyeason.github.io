@@ -89,7 +89,7 @@ footer p {
 }
 @media only screen and (max-width: 768px) {
     #logo {
-        margin: 12% 0 2% 0%;
+        margin: 5% 0 2% 0%;
         width: 27vw;
     }
     #background {
@@ -106,14 +106,14 @@ footer p {
         text-align: left;
         padding-right: 4%;
         color: black;
-        text-shadow: .25vw 0 2.5vw white;
+        text-shadow: .25vw 0 5.5vw white;
     }
     h5 {
         margin-top: -2%;
         font-size: 4vw;
         text-align: left;
         color: black;
-        text-shadow: .25vw 0 2.5vw white;
+        text-shadow: .25vw 0 5.5vw white;
     }
     .products-container {
         display: block;
